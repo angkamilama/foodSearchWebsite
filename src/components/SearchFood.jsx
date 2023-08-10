@@ -23,7 +23,7 @@ const handleSubmit = () => {
     <div>
         <form onSubmit={handleSubmit}>
             <label>
-              SearchWord:
+              Type an alphabet for the food list:
                 <input type='text' value={searchWord} onChange={(e) =>   setSearchWord(e.target.value)}/>
             </label>
             <button type='submit'>Search</button>
