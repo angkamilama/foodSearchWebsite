@@ -2,11 +2,13 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const SearchFoodSlice = createSlice({
     name: 'food',
-    initialState: [],
+    initialState: {
+        Items:[]
+    },
     reducers: {
         addFood(state, action) { 
-           state.push(action.payload)
-          
+            state.Items = action.payload;
+            return;
         }
     }
 })

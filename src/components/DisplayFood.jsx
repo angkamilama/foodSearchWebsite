@@ -7,12 +7,20 @@ import { useSelector } from 'react-redux';
   function DisplayFood() {
  
     const expectedState = useSelector(state => {
-        console.log( state.food);
+        const Items = state.food.Items;
+        console.log(Items);
+        return Items;
      })
   
     return(
         <div>
-            fdsff
+            {expectedState.map(item => {
+                return (
+                    <div key={item.idMeal}>
+                        <p>{item.strMeal}</p>
+                    </div>
+                )
+            })}
         </div>
     )
 }
