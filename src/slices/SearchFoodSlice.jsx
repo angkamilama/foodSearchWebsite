@@ -2,15 +2,14 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const SearchFoodSlice = createSlice({
     name: 'food',
-    initialState: {
-        Items:[]
-    },
+    initialState: '',
     reducers: {
-        addFood(state, action) { 
-            state.Items = action.payload;
-            return;
+        addFood(state, action) {
+            const newValue = action.payload;
+            return newValue;
         }
     }
 })
-export const {addFood} = SearchFoodSlice.actions;
-export default SearchFoodSlice;
+export const { addFood } = SearchFoodSlice.actions;
+
+export default SearchFoodSlice.reducer; 

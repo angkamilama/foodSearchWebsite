@@ -1,14 +1,13 @@
 import { configureStore } from "@reduxjs/toolkit";
 import SearchFoodSlice from "../slices/SearchFoodSlice";
 
- const store = configureStore({
+const store = configureStore({
     reducer: {
-        food: SearchFoodSlice.reducer
+        food: SearchFoodSlice,
     }
- })
+})
 
 
- export  {store};
+export default store;
 
- const  val = store.getState();
- console.log(val);
+console.log(store.getState().food);

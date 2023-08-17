@@ -1,26 +1,18 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { useSelector } from 'react-redux';
 
 
 
 
-  function DisplayFood() {
- 
+function DisplayFood() {
+
     const expectedState = useSelector(state => {
-        const Items = state.food.Items;
-        console.log(Items);
-        return Items;
-     })
-  
-    return(
+        return state.food;
+    })
+
+    return (
         <div>
-            {expectedState.map(item => {
-                return (
-                    <div key={item.idMeal}>
-                        <p>{item.strMeal}</p>
-                    </div>
-                )
-            })}
+            {expectedState}
         </div>
     )
 }
