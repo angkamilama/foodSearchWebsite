@@ -12,7 +12,7 @@ function SearchFood() {
 
 
   useEffect(() => {
-    axios.get(`https:/www.themealdb.com/api/json/v1/1/search.php?f=${searchWord}`).then(response => {
+    axios.get(`https://www.themealdb.com/api/json/v1/1/search.php?f=${searchWord}`).then(response => {
       console.log(response.data.meals[0].strMeal);
       dispatch(addFood(response.data.meals[0].strMeal))
     }
